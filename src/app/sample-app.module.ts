@@ -1,4 +1,4 @@
-import {NgModule}      from '@angular/core';
+import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {BrowserModule} from '@angular/platform-browser';
 import {
@@ -13,19 +13,11 @@ import {
 import {
   FormsModule,
   FormBuilder,
-  ReactiveFormsModule,
+  ReactiveFormsModule
 } from '@angular/forms';
-import {RioSampleApp} from './sample-app';
-import {SessionActions} from '../actions/session.actions';
-import {SessionEpics} from '../epics/session.epics';
-import {
-  RioAboutPage,
-  RioCounterPage
-} from '../pages';
-import {RioCounter} from '../components/counter/counter.component';
-import {RioLoginModule} from '../components/login/login.module';
-import {RioUiModule} from '../components/ui/ui.module';
-import {RioNavigatorModule} from '../components/navigator/navigator.module';
+import {SampleApp} from './sample-app';
+import {RacesPage} from '../pages';
+import {NgReduxForms} from 'ng2-redux-form';
 
 @NgModule({
   imports: [
@@ -34,27 +26,21 @@ import {RioNavigatorModule} from '../components/navigator/navigator.module';
     BrowserModule,
     routing,
     CommonModule,
-    RioLoginModule,
-    RioUiModule,
-    RioNavigatorModule
+    NgReduxForms
   ],
   declarations: [
-    RioSampleApp,
-    RioAboutPage,
-    RioCounterPage,
-    RioCounter
+    SampleApp,
+    RacesPage
   ],
   bootstrap: [
-    RioSampleApp
+    SampleApp
   ],
   providers: [
     DevToolsExtension,
     FormBuilder,
     NgRedux,
     NgReduxRouter,
-    appRoutingProviders,
-    SessionActions,
-    SessionEpics
+    appRoutingProviders
   ]
 })
-export class RioSampleAppModule { }
+export class RioSampleAppModule {}

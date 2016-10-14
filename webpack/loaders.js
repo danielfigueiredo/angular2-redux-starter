@@ -24,7 +24,6 @@ exports.ts = {
     useForkChecker: true,
     tsconfig: './tsconfig.json',
   },
-  exclude: /node_modules/,
 };
 
 exports.istanbulInstrumenter = {

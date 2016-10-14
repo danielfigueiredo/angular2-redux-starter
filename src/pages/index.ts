@@ -1,4 +1,3 @@
-import { RioAboutPage } from './about.page';
-import { RioCounterPage } from './counter.page';
+import { RacesPage } from './races.page';
 
-export { RioAboutPage, RioCounterPage };
+export { RacesPage };
