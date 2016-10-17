@@ -2,11 +2,14 @@ import { Component } from '@angular/core';
 
 @Component({
   template: `
-    <rio-form name="form1">
-      <rio-input
-        name="firstName">
-      </rio-input> 
-    </rio-form>
+    <form connect="form1">
+      <input
+        ngControl
+        ngModel
+        type="text"
+        class="block col-12 mb1 input"
+        name="firstName" />
+    </form>
   `
 })
 export class RacesPage {}
