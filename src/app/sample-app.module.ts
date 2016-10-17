@@ -17,7 +17,9 @@ import {
 } from '@angular/forms';
 import {SampleApp} from './sample-app';
 import {RacesPage} from '../pages';
-import {NgReduxForms} from 'ng2-redux-form';
+import {RioUiModule} from '../components/ui/ui.module';
+import {RioNavigatorModule} from '../components/navigator/navigator.module';
+import {RioFormModule} from '../components/form/form.module';
 
 @NgModule({
   imports: [
@@ -26,7 +28,10 @@ import {NgReduxForms} from 'ng2-redux-form';
     BrowserModule,
     routing,
     CommonModule,
-    NgReduxForms
+    CommonModule,
+    RioUiModule,
+    RioNavigatorModule,
+    RioFormModule
   ],
   declarations: [
     SampleApp,

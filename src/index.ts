@@ -4,8 +4,8 @@ import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
 // The app module
 import {RioSampleAppModule} from './app/sample-app.module';
 import {enableProdMode} from '@angular/core';
-
 import {production, test} from './configuration';
+import 'rxjs';
 
 if (production) {
   enableProdMode();
