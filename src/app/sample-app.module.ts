@@ -3,9 +3,11 @@ import {CommonModule} from '@angular/common';
 import {BrowserModule} from '@angular/platform-browser';
 import {
   DevToolsExtension,
-  NgRedux
+  NgRedux,
+  NgReduxModule,
 } from 'ng2-redux';
 import {NgReduxRouter} from 'ng2-redux-router';
+import {NgReduxForms} from 'ng2-redux-form';
 import {
   routing,
   appRoutingProviders
@@ -31,7 +33,9 @@ import {RioFormModule} from '../components/form/form.module';
     CommonModule,
     RioUiModule,
     RioNavigatorModule,
-    RioFormModule
+    RioFormModule,
+    NgReduxModule,
+    NgReduxForms,
   ],
   declarations: [
     SampleApp,
@@ -46,6 +50,6 @@ import {RioFormModule} from '../components/form/form.module';
     NgRedux,
     NgReduxRouter,
     appRoutingProviders
-  ]
+  ],
 })
 export class RioSampleAppModule {}

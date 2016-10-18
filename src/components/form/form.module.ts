@@ -5,14 +5,12 @@ import {
   FormsModule
 } from '@angular/forms';
 import {
-  RioForm,
   RioFormGroup,
   RioFormError,
-  RioInput,
   RioLabel
 } from './index';
 import {NgReduxForms} from 'ng2-redux-form';
-import {provideReduxForms} from 'ng2-redux-form';
+import {NgRedux, NgReduxModule} from 'ng2-redux';
 import {store} from '../../store';
 
 @NgModule({
@@ -20,24 +18,18 @@ import {store} from '../../store';
     CommonModule,
     ReactiveFormsModule,
     FormsModule,
-    NgReduxForms
+    NgReduxForms,
+    NgReduxModule,
   ],
   declarations: [
-    RioForm,
     RioFormGroup,
     RioFormError,
     RioLabel,
-    RioInput
-  ],
-  providers: [
-    provideReduxForms(store)
   ],
   exports: [
-    RioForm,
     RioFormGroup,
     RioFormError,
     RioLabel,
-    RioInput
-  ]
+  ],
 })
 export class RioFormModule { }
